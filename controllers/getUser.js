@@ -2,7 +2,7 @@ const User = require("../models/User");
 exports.getUser=async(req,res)=>{
     try{
          // Access user details from the authenticated request
-         const { email } = req.user; // Assuming you store user information in the JWT payload
+         const { email } = req.user; 
           // Find the user in the database based on the authenticated email
         const user = await User.findOne({ email });
         if (!user) {
@@ -11,7 +11,7 @@ exports.getUser=async(req,res)=>{
           }
       
           // If user found, return the user details
-          res.status(200).json({ success: true, user });
+          res.status(200).json({ success: true,message:"retrieve successsfully", user });
 
     }
     catch(err){

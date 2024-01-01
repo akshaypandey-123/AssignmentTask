@@ -4,8 +4,8 @@ const jwt = require("jsonwebtoken");
 
 exports.refreshToken=async(req,res)=>{
     try{
-        // Extract the refresh token from the request (assuming it's sent in the request body or headers)
-        const { refreshToken } = req.body; // Change this according to how the refresh token is sent
+        // Extract the refresh token from the request 
+        const { refreshToken } = req.body; 
         // Verify the refresh token
         const decoded = jwt.verify(refreshToken, process.env.JWT_SECRET);
 

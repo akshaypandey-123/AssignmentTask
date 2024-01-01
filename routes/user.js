@@ -33,10 +33,10 @@ router.put("/user/update",auth,updateUser)
 
 
 
-// Routes for Login, Signup, and Authentication
+// Routes for Login, Signup, sendotp
 
 // ********************************************************************************************************
-//                                      Authentication routes
+//                                    
 // ********************************************************************************************************
 
 // Route for user login

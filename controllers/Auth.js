@@ -73,9 +73,7 @@ exports.signup = async (req, res) => {
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10)
 
-    // Create the user
-    let approved = ""
-    approved === "Instructor" ? (approved = false) : (approved = true)
+  
 
 
     const user = await User.create({
@@ -83,7 +81,7 @@ exports.signup = async (req, res) => {
       email,
     
       password: hashedPassword,
-      accountType: accountType,
+    
     
     })
 
